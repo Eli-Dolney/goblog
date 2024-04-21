@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Blog</h1>
+    </header>
+    <main>
+        {{range .}}
+        <article>
+            <h2>{{.Title}}</h2>
+            <p>{{.Content}}</p>
+            <footer>
+                <small>Posted on: {{.Date}} | Category: {{.Category}}</small>
+            </footer>
+        </article>
+        {{end}}
+    </main>
+</body>
+</html>
